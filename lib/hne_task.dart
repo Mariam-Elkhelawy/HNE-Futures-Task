@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hne_futures_task/features/home/home_screen.dart';
+import 'features/home/presentation/pages/home_screen.dart';
 
 class HNEFuturesTask extends StatelessWidget {
   const HNEFuturesTask({super.key});
