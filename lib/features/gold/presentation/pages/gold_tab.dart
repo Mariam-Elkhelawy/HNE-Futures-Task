@@ -70,7 +70,8 @@ class GoldTab extends StatelessWidget {
                   final price = goldPrices[index][AppStrings.price] as double?;
                   return ListTile(
                     title: Text('$goldType ${AppStrings.gold}'),
-                    subtitle: Text('Price: ${price?.toStringAsFixed(2)} EGP'),
+                    subtitle: Text(
+                        '${AppStrings.priceCapital} ${price?.toStringAsFixed(2)} ${AppStrings.eg}'),
                   );
                 },
               ),

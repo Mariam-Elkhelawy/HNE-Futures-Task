@@ -4,10 +4,14 @@ class AppStrings{
   static const String currency = 'Currency';
   static const String graph = 'Graph';
   static const String token = 'x-access-token';
+  static const String accessKey = 'access_key';
+  static const String symbols = 'symbols';
   static const String error = 'Error !';
   static const String wrong = 'Something went wrong';
   static const String price = 'price';
+  static const String priceCapital = 'Price:';
   static const String type = 'type';
+  static const String eg = 'EGP';
   static const String k24 = '24K';
   static const String k22 = '22K';
   static const String k21 = '21K';
