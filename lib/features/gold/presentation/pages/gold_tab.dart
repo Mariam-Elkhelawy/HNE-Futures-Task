@@ -5,7 +5,7 @@ import 'package:hne_futures_task/core/utils/app_colors.dart';
 import 'package:hne_futures_task/core/utils/app_strings.dart';
 import 'package:hne_futures_task/features/gold/data/data_sources/remote/gold_remote_ds_implement.dart';
 import 'package:hne_futures_task/features/gold/data/repositories/gold_repo_implement.dart';
-import 'package:hne_futures_task/features/gold/domain/use_cases/gold_repo_usecase.dart';
+import 'package:hne_futures_task/features/gold/domain/use_cases/gold_usecase.dart';
 import 'package:hne_futures_task/features/gold/presentation/bloc/gold_bloc.dart';
 
 class GoldTab extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:hne_futures_task/core/enums/enums.dart';
 import 'package:hne_futures_task/core/errors/failures.dart';
 import 'package:hne_futures_task/features/gold/data/models/GoldModel.dart';
-import 'package:hne_futures_task/features/gold/domain/use_cases/gold_repo_usecase.dart';
+import 'package:hne_futures_task/features/gold/domain/use_cases/gold_usecase.dart';
 import 'package:meta/meta.dart';
 
 part 'gold_event.dart';
