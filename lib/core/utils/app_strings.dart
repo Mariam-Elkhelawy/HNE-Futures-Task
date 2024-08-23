@@ -12,6 +12,7 @@ class AppStrings{
   static const String priceCapital = 'Price:';
   static const String type = 'type';
   static const String eg = 'EGP';
+  static const String ur = 'EUR';
   static const String k24 = '24K';
   static const String k22 = '22K';
   static const String k21 = '21K';
@@ -20,4 +21,9 @@ class AppStrings{
   static const String k16 = '16K';
   static const String k14 = '14K';
   static const String k10 = '10K';
+  static const String urToEg = 'EUR to EGP';
+  static const String egToUr = 'EGP to EUR';
+  static const String amount = 'Converted Amount:';
+  static const String enterAmount = 'Enter amount in';
+  static const String select = 'Select Conversion';
 }

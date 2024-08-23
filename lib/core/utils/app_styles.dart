@@ -15,6 +15,10 @@ class AppStyles {
     fontSize: 24.sp,
     fontWeight: FontWeight.w500,
     color: AppColor.whiteColor,
+  ); static TextStyle bodyLarge = GoogleFonts.poppins(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColor.primaryColor,
   );
 
 }

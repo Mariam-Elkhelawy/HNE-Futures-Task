@@ -7,6 +7,7 @@ import 'package:hne_futures_task/features/currency/data/models/CurrencyModel.dar
 
 class CurrencyRemoteDsImplementation implements CurrencyRemoteDs {
   ApiManager apiManager = ApiManager();
+
   @override
   Future<CurrencyModel> getCurrency() async {
     var response = await apiManager.getData(
@@ -15,9 +16,11 @@ class CurrencyRemoteDsImplementation implements CurrencyRemoteDs {
         queryParameters: {
           AppStrings.accessKey: Constants.CURRENCY_ACCESS_TOKEN,
           AppStrings.symbols: AppStrings.eg
-        });
-    CurrencyModel currencyModel = CurrencyModel.fromJson(response);
+        }
+    );
+
     if (response.statusCode == 200) {
+      CurrencyModel currencyModel = CurrencyModel.fromJson(response.data);
       return currencyModel;
     } else {
       throw Exception('Failed to load prices');

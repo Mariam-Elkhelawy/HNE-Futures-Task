@@ -60,6 +60,8 @@ class GoldTab extends StatelessWidget {
             ];
 
             return RefreshIndicator(
+              backgroundColor: AppColor.secondaryColor,
+              color: AppColor.primaryColor,
               onRefresh: () async {
                 BlocProvider.of<GoldBloc>(context).add(GoldEvent());
               },

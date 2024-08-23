@@ -11,7 +11,7 @@ part 'currency_state.dart';
 class CurrencyBloc extends Bloc<CurrencyEvent, CurrencyState> {
   CurrencyUseCase currencyUseCase;
   CurrencyBloc(this.currencyUseCase) : super(const CurrencyInitialState()) {
-    on<CurrencyEvent>((event, emit) async {
+    on<CurrencyEvent>((event, emit) async{
       emit(state.copyWith(status: ScreenStatus.loading));
       var result = await currencyUseCase.getCurrency();
       result.fold((l) {
