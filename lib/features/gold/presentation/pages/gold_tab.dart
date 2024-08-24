@@ -7,6 +7,7 @@ import 'package:hne_futures_task/features/gold/data/data_sources/remote/gold_rem
 import 'package:hne_futures_task/features/gold/data/repositories/gold_repo_implement.dart';
 import 'package:hne_futures_task/features/gold/domain/use_cases/gold_usecase.dart';
 import 'package:hne_futures_task/features/gold/presentation/bloc/gold_bloc.dart';
+import 'package:hne_futures_task/features/gold/presentation/widgets/gold_widget.dart';
 
 class GoldTab extends StatelessWidget {
   const GoldTab({super.key});
@@ -58,7 +59,6 @@ class GoldTab extends StatelessWidget {
                 AppStrings.price: state.goldModel!.priceGram10k
               },
             ];
-
             return RefreshIndicator(
               backgroundColor: AppColor.secondaryColor,
               color: AppColor.primaryColor,
@@ -69,12 +69,8 @@ class GoldTab extends StatelessWidget {
                 itemCount: goldPrices.length,
                 itemBuilder: (context, index) {
                   final goldType = goldPrices[index][AppStrings.type] as String;
-                  final price = goldPrices[index][AppStrings.price] as double?;
-                  return ListTile(
-                    title: Text('$goldType ${AppStrings.gold}'),
-                    subtitle: Text(
-                        '${AppStrings.priceCapital} ${price?.toStringAsFixed(2)} ${AppStrings.eg}'),
-                  );
+                  final price = goldPrices[index][AppStrings.price] as double;
+                  return GoldWidget(goldType: goldType, price: price);
                 },
               ),
             );

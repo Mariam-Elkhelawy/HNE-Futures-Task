@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> tabs = [CurrencyTab(), GoldTab(), CurrencyTab()];
+    List<Widget> tabs = [const CurrencyTab(), const GoldTab()];
     return BlocProvider(
       create: (context) => HomeBloc(),
       child: BlocBuilder<HomeBloc, HomeState>(

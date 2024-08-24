@@ -51,10 +51,7 @@ class NavBar extends StatelessWidget {
               icon: LineIcons.coins,
               text: AppStrings.gold,
             ),
-            GButton(
-              icon: Icons.auto_graph_outlined,
-              text: AppStrings.graph,
-            ),
+
           ],
         ),
       ),

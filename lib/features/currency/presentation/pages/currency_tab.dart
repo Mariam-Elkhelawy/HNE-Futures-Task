@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hne_futures_task/core/enums/enums.dart';
 import 'package:hne_futures_task/core/utils/app_colors.dart';
+import 'package:hne_futures_task/core/utils/app_images.dart';
 import 'package:hne_futures_task/core/utils/app_strings.dart';
 import 'package:hne_futures_task/core/utils/app_styles.dart';
 import 'package:hne_futures_task/features/currency/data/data_sources/currency_remote_ds_implement.dart';
@@ -54,8 +55,12 @@ class CurrencyTabState extends State<CurrencyTab> {
                 padding: EdgeInsets.all(16.r),
                 child: ListView(
                   children: [
+                    Image.asset(
+                      AppImages.currency,
+                      height: 320.h,
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 8.0.h),
+                      padding: EdgeInsets.only(top: 16.h, bottom: 8.h),
                       child: Text(
                         '1 ${AppStrings.ur} = ${euroToEgpRate.toStringAsFixed(2)} ${AppStrings.eg}',
                         textAlign: TextAlign.center,
@@ -79,6 +84,7 @@ class CurrencyTabState extends State<CurrencyTab> {
                             },
                           );
                         },
+                        dropdownColor: AppColor.whiteColor,
                         items: <String>[AppStrings.urToEg, AppStrings.egToUr]
                             .map<DropdownMenuItem<String>>(
                           (String value) {
@@ -91,31 +97,34 @@ class CurrencyTabState extends State<CurrencyTab> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: EdgeInsets.symmetric(vertical: 12.h),
                       child: TextField(
                         controller: amountController,
                         decoration: InputDecoration(
-                            labelText:
-                                '${AppStrings.enterAmount} ${selectedConversion.startsWith(AppStrings.ur) ? AppStrings.ur : AppStrings.eg}',
-                            border: const OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: AppColor.primaryColor),
-                            ),
-                            focusColor: AppColor.primaryColor),
+                          labelText:
+                              '${AppStrings.enterAmount} ${selectedConversion.startsWith(AppStrings.ur) ? AppStrings.ur : AppStrings.eg}',
+                          border: const OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppColor.primaryColor),
+                          ),
+                          focusColor: AppColor.primaryColor,
+                        ),
                         keyboardType: TextInputType.number,
                         onChanged: (value) {
                           final amount = double.tryParse(value) ?? 0.0;
                           final converted =
                               (amount * conversionRate).toStringAsFixed(2);
-                          setState(() {
-                            convertedAmount = converted;
-                          });
+                          setState(
+                            () {
+                              convertedAmount = converted;
+                            },
+                          );
                         },
                       ),
                     ),
                     // Display the converted amount
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      padding: EdgeInsets.symmetric(vertical: 16.h),
                       child: Text(
                         '${AppStrings.amount} ${selectedConversion.startsWith(AppStrings.ur) ? AppStrings.eg : AppStrings.ur} $convertedAmount',
                         textAlign: TextAlign.center,
