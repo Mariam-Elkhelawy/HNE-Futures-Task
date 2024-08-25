@@ -34,8 +34,6 @@ Both tabs fetch data from public APIs and include testing functionalities.
 Testing ensures the app functions correctly across various states:
 
 - ✅**Display Data** : Verify correct display of currency rates and gold prices when data is successfully fetched.
-- ❌**Error Handling** : Ensure appropriate error messages are shown if data fetching fails.
-- ⏳**Loading State** : Check that a loading indicator is visible while data is being fetched.
 
 Tests are written for both tabs to ensure consistency and reliability.
 
