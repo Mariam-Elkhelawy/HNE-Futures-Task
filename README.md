@@ -14,7 +14,12 @@ Both tabs fetch data from public APIs and include testing functionalities.
 - 🏅**Gold Prices** : View current gold prices in Egypt for various gold types (24K, 18K, etc.).
 - 🔄**Pull-to-Refresh** : Manually refresh data by pulling down on the screen.
 
+## Demo 🎥
 
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/74e53bc7-1f4b-4103-95b4-256912f6a62a" controls>
+</div>
+     
 ## Technology Stack 🛠️
 
 - 🐦**Flutter** : For cross-platform app development.
