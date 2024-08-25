@@ -62,3 +62,6 @@ To get started with this project, follow these steps:
 
    ```bash
    flutter run
+
+---
+I'm thrilled to join your team and show my skills! 🚀 I'm eager to contribute and make an impact. Thank you for considering my application! 🙌
