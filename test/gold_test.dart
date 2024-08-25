@@ -20,14 +20,14 @@ void main() {
   testWidgets('GoldTab displays gold prices when state is success',
       (WidgetTester tester) async {
     final goldModel = GoldModel(
-      priceGram24k: 3000.0,
-      priceGram22k: 2700.0,
-      priceGram21k: 2600.0,
-      priceGram20k: 2500.0,
-      priceGram18k: 2300.0,
-      priceGram16k: 2100.0,
-      priceGram14k: 1900.0,
-      priceGram10k: 1500.0,
+      priceGram24k: 3000,
+      priceGram22k: 2700,
+      priceGram21k: 2600,
+      priceGram20k: 2500,
+      priceGram18k: 2300,
+      priceGram16k: 2100,
+      priceGram14k: 1900,
+      priceGram10k: 1500,
     );
 
     when(mockGoldBloc.state).thenReturn(
@@ -45,9 +45,9 @@ void main() {
     await tester.pump();
 
     expect(find.text('24k'), findsOneWidget);
-    expect(find.text('3000.0'), findsOneWidget);
+    expect(find.text('3000'), findsOneWidget);
     expect(find.text('18k'), findsOneWidget);
-    expect(find.text('2400.0'), findsOneWidget);
+    expect(find.text('2300'), findsOneWidget);
   });
 
   testWidgets('GoldTab shows error message when state is failure',
