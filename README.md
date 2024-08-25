@@ -1,16 +1,67 @@
-# hne_futures_task
+# HNE Futures Task 📊💰
 
-A new Flutter project.
+# Overview 🌟
 
-## Getting Started
+This Flutter app for HNE Futures features two tabs:
 
-This project is a starting point for a Flutter application.
+- 💵**Currency Tab** : Displays the exchange rate between EGP (Egyptian Pound) and EUR (Euro) and allows currency conversion.
+- 🏅**Gold Tab** : Shows gold prices in Egypt, including different gold types (e.g., 24K, 18K) and their prices per gram or ounce.
 
-A few resources to get you started if this is your first Flutter project:
+Both tabs fetch data from public APIs and include testing functionalities.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features ✨
+- 💹**Currency Exchange** : View EGP to EUR rates and perform currency conversions.
+- 🏅**Gold Prices** : View current gold prices in Egypt for various gold types (24K, 18K, etc.).
+- 🔄**Pull-to-Refresh** : Manually refresh data by pulling down on the screen.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Technology Stack 🛠️
+
+- 🐦**Flutter** : For cross-platform app development.
+- 🏗️**Clean Architecture** : Organizes code into layers for maintainability.
+- 🧩**BLoC** : Manages application state and business logic.
+- 🚀**Dio** : Handles API requests and responses.
+- 🌐**Restful APIs** : Provides data from external services.
+- 📐**ScreenUtilInit** : Ensures responsiveness across different screen sizes and orientations.
+
+
+## Testing 🧪
+Testing ensures the app functions correctly across various states:
+
+- ✅**Display Data** : Verify correct display of currency rates and gold prices when data is successfully fetched.
+- ❌**Error Handling** : Ensure appropriate error messages are shown if data fetching fails.
+- ⏳**Loading State** : Check that a loading indicator is visible while data is being fetched.
+
+Tests are written for both tabs to ensure consistency and reliability.
+
+## Installation 🛠️
+
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Mariam-Elkhelawy/HNE-Futures-Task
+
+2. **Navigate to the project directory**:
+ 
+   ```bash
+   cd HNE-Futures-Task
+   
+3. **Install dependencies**:
+ 
+   ```bash
+   flutter pub get
+
+4. **Define API Keys in Constants File** : </br>   Navigate to the utils folder located within the core folder and add your Api key :
+
+   ```bash
+   static const String GOLD_ACCESS_TOKEN = 'your_api_key_here';
+   static const String CURRENCY_ACCESS_TOKEN = 'your_api_key_here';
+  
+5. **Run the app**:  
+
+   ```bash
+   flutter run
+
+---
+I'm thrilled to join your team and show my skills! 🚀 I'm eager to contribute and make an impact. Thank you for considering my application! 🙌
