@@ -1,5 +1,7 @@
 # HNE Futures Task 📊💰
 
+# Overview 🌟
+
 This Flutter app for HNE Futures features two tabs:
 
 - **Currency Tab** 💵: Displays the exchange rate between EGP (Egyptian Pound) and EUR (Euro) and allows currency conversion.
@@ -9,22 +11,28 @@ Both tabs fetch data from public APIs and include testing functionalities.
 
 ## Features ✨
 - **Currency Exchange** 💹: View EGP to EUR rates and perform currency conversions.
-- **Gold Prices** 🏅: View current gold prices in Egypt for various gold types.
+- **Gold Prices** 🏅: View current gold prices in Egypt for various gold types (24K, 18K, etc.).
 - **Pull-to-Refresh** 🔄: Manually refresh data by pulling down on the screen.
 
 
-# HNE Futures Task 📊💰
+## Technology Stack 🛠️
 
-A Flutter application that provides real-time exchange rates and gold prices, allowing users to easily access and monitor financial data. The app features a responsive UI with tabs for currency exchange rates and gold prices, data fetching from public APIs, and manual data refresh.
+- **Flutter** 🐦: For cross-platform app development.
+- **Clean Architecture** 🏗️: Organizes code into layers for maintainability.
+- **BLoC** 🧩: Manages application state and business logic.
+- **Dio** 🚀: Handles API requests and responses.
+- **Restful APIs** 🌐: Provides data from external services.
+- **ScreenUtilInit** 📐: Ensures responsiveness across different screen sizes and orientations.
 
-## Features
 
-### Currency Tab 💵
-- **Displays Exchange Rates**: Shows the exchange rate of EGP (Egyptian Pound) to EUR (Euro).
-- **Currency Conversion**: Allows conversion between EGP and EUR.
+## Testing 🧪
+Testing ensures the app functions correctly across various states:
 
-### Gold Tab 🏅
-- **Displays Gold Prices**: Shows the current prices of different gold purities (24K, 18K, etc.) in EGP.
+- **Display Data** ✅: Verify correct display of currency rates and gold prices when data is successfully fetched.
+- **Error Handling** ❌: Ensure appropriate error messages are shown if data fetching fails.
+- **Loading State** ⏳: Check that a loading indicator is visible while data is being fetched.
+
+Tests are written for both tabs to ensure consistency and reliability.
 
 ## Installation 🛠️
 
