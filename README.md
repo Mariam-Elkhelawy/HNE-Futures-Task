@@ -1,6 +1,5 @@
 # HNE Futures Task 📊💰
 
-# Overview 🌟
 This Flutter app for HNE Futures features two tabs:
 
 - **Currency Tab** 💵: Displays the exchange rate between EGP (Egyptian Pound) and EUR (Euro) and allows currency conversion.
